@@ -207,20 +207,6 @@ public class PixelPropsUtils {
         }
     }
 
-    public static boolean shouldBypassTaskPermission(Context context) {
-        // GMS doesn't have MANAGE_ACTIVITY_TASKS permission
-        final int callingUid = Binder.getCallingUid();
-        final int gmsUid;
-        try {
-            gmsUid = context.getPackageManager().getApplicationInfo("com.google.android.gms", 0).uid;
-            dlog("shouldBypassTaskPermission: gmsUid:" + gmsUid + " callingUid:" + callingUid);
-        } catch (Exception e) {
-            Log.e(TAG, "shouldBypassTaskPermission: unable to get gms uid", e);
-            return false;
-        }
-        return gmsUid == callingUid;
-    }
-
     private static void spoofBuildGms() {
         // Alter build parameters to avoid hardware attestation enforcement
         setPropValue("BRAND", "google");
