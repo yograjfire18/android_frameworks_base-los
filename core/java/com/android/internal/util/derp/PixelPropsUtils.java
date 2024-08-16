@@ -225,10 +225,10 @@ public class PixelPropsUtils {
         // Alter build parameters to avoid hardware attestation enforcement
         setPropValue("BRAND", "google");
         setPropValue("MANUFACTURER", "Google");
-        setPropValue("DEVICE", "cheetah");
-        setPropValue("FINGERPRINT", "google/cheetah_beta/cheetah:15/AP31.240617.010/12136053:user/release-keys");
-        setPropValue("MODEL", "Pixel 7 Pro");
-        setPropValue("PRODUCT", "cheetah_beta");
+        setPropValue("DEVICE", "caiman");
+        setPropValue("FINGERPRINT", "google/caiman/caiman:14/AD1A.240530.047.U1/12150698:user/release-keys");
+        setPropValue("MODEL", "Pixel 9 Pro");
+        setPropValue("PRODUCT", "caiman");
     }
 
     private static boolean isCallerSafetyNet() {
